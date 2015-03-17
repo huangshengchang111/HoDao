@@ -49,7 +49,7 @@
                 <!--<td>{{ order.created_time.strftime('%Y-%m-%d') }}</td>-->
                 <!--<td>{{ order.company }}</td>-->
                 <td>{{ order.name }}</td>
-                <td>{{ order.phone }} {% if order.address %}(配送至：{{ order.address }}){% endif %}</td>
+                <td>{{ order.phone }} {% if order.address %}({{ order.address }}){% endif %}</td>
 
                 <td>
                     {% for ix, v in order_status_mapping.items()|sort %}
