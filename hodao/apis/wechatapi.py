@@ -133,7 +133,10 @@ def subscribe_msg():
 
     content = (
         """星海用Ho道！生活无难度～/礼物/礼物\n\n"""
-        """点击蓝字进入【<a href="%s">Ho道菜单</a>】\n"""
+        """【<a href="%s">点击进入Ho道菜单</a>】\n\n"""
+        """【<a href="http://mp.weixin.qq.com/s?__biz=MzA4MDI2NjMyOA==&mid=213306361&idx=2&sn=eddd15c8099b9b75d66f4ee7136e9cdc#rd">点击获取《不小心》音乐会介绍</a>】 \n\n"""
+        """找客服，请回复：E\n"""
+
         # """B. Ho-shop\n"""
         # """C. Ho道大喇叭\n"""
         # """D. 寻求合作\n"""
@@ -154,7 +157,9 @@ def help_msg():
 
     content = (
         """星海用Ho道！生活无难度～/礼物/礼物\n\n"""
-        """点击蓝字进入【<a href="%s">Ho道菜单</a>】\n"""
+        """【<a href="%s">点击进入Ho道菜单</a>】\n\n"""
+        """【<a href="http://mp.weixin.qq.com/s?__biz=MzA4MDI2NjMyOA==&mid=213306361&idx=2&sn=eddd15c8099b9b75d66f4ee7136e9cdc#rd">点击获取《不小心》音乐会介绍</a>】 \n\n"""
+        """找客服，请回复：E\n"""
         %
         (
             util.make_auth_url(to_user, redirect='/order/create'),

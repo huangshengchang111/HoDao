@@ -1,0 +1,24 @@
+<nav class="navbar navbar-default" role="navigation" style="margin-bottom: 0px;">
+<div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Ho-Life(D栋)</a>
+      <a class="navbar-brand" style="font-size: 14px" href="">切换地址 ︾</a>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav cl-hs-shop-nav">
+            <li><a href="{{ url_for('user.user_info') }}">个人中心</a></li>
+            <li><a href="{{ url_for('shop.list_orders') }}">追踪订单</a></li>
+            <li><a href="#">回到主页</a></li>
+            {% if session.get(session_userrole_key) == user_role.ADMIN %}
+            <li><a href="{{ url_for('admin.list_orders') }}">回到商品管理页面</a></li>
+            {% endif %}
+        </ul>
+    </div>
+</div>
+</nav>

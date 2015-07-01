@@ -4,14 +4,18 @@
     {% include 'header.html' %}
   </head>
   <body>
-
-    <div class="container" style="margin-top: 5%">
+  
+    <div class="container" style="margin-top: 12%">
 
       <div class="row">
-          <div class="col-sm-12">
-              <p style="text-align: center;"><img alt="" src="/static/logo2.png" style="width: 75%"/></p>
-          </div>
+        <div style="width: 98%;margin-left: auto;margin-right: auto;margin-bottom: 3px;margin-top: 5%;">
+          <input type="button" class="btn btn-primary" onClick="history.go(-1)" value="Ho-Shop" style="width: 49%; background-color: #000000; border-color: #b3f51b;">
+		  <!--<a href="/holife/user/hodaologin" class="btn btn-primary" id="hoshopLink" style="width: 49%">Ho-Shop</a>-->
+          <a href="../../../express" class="btn btn-primary" style="width: 49%;  background-color: #000000; border-color: #b3f51b;">Ho-快递</a>
+        </div>
       </div>
+	  <br>
+	  <br>
 
       <div class="row">
 
@@ -30,6 +34,7 @@
                           <option value="优速">优速</option>
                           <option value="全峰">全峰</option>
                           <option value="国通">国通</option>
+						  <option value="其他">其它在努力增加中</option>
                       </select>
                   </div>
               </div>
@@ -68,9 +73,9 @@
                       <input style="text-align:center;" name="amount" type="tel" class="form-control" id="inputAmount" value="1">
                   </div>
                   <div class="col-sm-2  col-xs-6">
-                      <button type="button" class="btn btn-default" onclick="incrAmount(-1);">-</button>
+                      <button type="button" class="btn btn-default" onClick="incrAmount(-1);">-</button>
                       <span style="margin-left: 10px;"></span>
-                      <button type="button" class="btn btn-default" onclick="incrAmount(1);">+</button>
+                      <button type="button" class="btn btn-default" onClick="incrAmount(1);">+</button>
                   </div>
               </div>
 
@@ -80,18 +85,18 @@
                   <div class="col-sm-4  col-xs-4" style="width: 300px;">
 
                       {% if quota > 0 %}
-                      <button type="button" class="btn btn-default" onclick="getAddress()" id="id-hs-address-btn">送货上门</button>
+                      <button type="button" class="btn btn-default" onClick="getAddress()" id="id-hs-address-btn" style="margin-left:21%">送货上门</button>
                       <input name="address" type="hidden" class="form-control" id="inputAddress" value="">
                       <span style="color: #0fa7ff">今天名额剩{{ quota }}个</span>
                       {% else %}
-                      <button type="button" class="btn btn-default" disabled>送货上门</button>
+                      <button type="button" class="btn btn-default" disabled style="margin-left:15%">送货上门</button>
                       <span style="color: #0fa7ff">今天送货上门名额已被抢光</span>
                       {% endif %}
                   </div>
               </div>
 
               <div class="row form-group">
-                  <div class="col-sm-offset-4 col-sm-8">
+                  <div class="col-sm-offset-4 col-sm-8" style="margin-left:16%">
                     <div class="checkbox">
                         <label class="yellow-font" >
                           <input required type="checkbox" style="width:20px;height:20px" id="inputAgreement">
@@ -104,12 +109,14 @@
                     </div>
                   </div>
               </div>
-              <div class="row form-group">
+			  <br>
+			  <br>
+              <div class="row form-group" style="margin-left:12%">
                 <div class="col-sm-offset-4 col-sm-8">
                   <button type="submit" class="btn btn-default">去吧～Ho道</button>
 
                   <input type="button" style="margin-left: 20px"
-                         class="btn btn-default" onclick="location.href='/order'"
+                         class="btn btn-default" onClick="location.href='/order'"
                          value="追踪Ho单"/>
                 </div>
 
@@ -127,17 +134,17 @@
         <div class="modal-header center-block ">
             <h4 class="center-block">送货上门须知</h4>
             <ul><li>送货时间：周日 - 周五</li>
-                <li>总价：每件3元（多件者第一件3元，往后每件2元）</li>
+                <li>总价：每件2元</li>
                 <li>货物仅限中小件（超重、超大的请勿选择此项服务。不便之处，敬请原谅！）</li>
             </ul>
         </div>
         <div class="modal-body">
             <label for="id-hs-dorm-address-input" class="control-label">输入您的地址：</label>
-            <input type="text" class="form-control" id="id-hs-dorm-address-input" placeholder="例:A111">
+            <input type="text" class="form-control" id="id-hs-dorm-address-input">
         </div>
         <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal" onclick="removeAddress()">取消</button>
-            <button class="btn btn-primary" onclick="confirmAddress()">确认</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal" onClick="removeAddress()">取消</button>
+            <button class="btn btn-primary" onClick="confirmAddress()">确认</button>
         </div>
     </div>
     </div>

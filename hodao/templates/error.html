@@ -2,23 +2,48 @@
 <html lang="zh-CN">
   <head>
     {% include 'header.html' %}
+	
+	<style type="text/css">
+
+.container {
+    height: 100%;
+}
+
+.logo {
+    margin-top: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 5%;
+    width: 80%;
+}
+
+.container > a:nth-child(3) {
+    margin-left: 12%;
+}
+
+.container > a:nth-child(6) {
+    margin-left: 12%;
+}
+
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 767px) {
+    
+    .logo {
+        margin-bottom: 15%;
+    }
+
+</style>
   </head>
   <body>
 
-    <div class="container">
-
-        <h1 class="white-font">出错啦</h1>
-
-        {% if msg %}
-        <p class="white-font">{{ msg }}</p>
-        {% endif %}
-        {% if raw %}
-        {{ raw|safe }}
-        {% endif %}
-
+    <div class="container" style="text-align:center">
+	  <a href="http://mp.weixin.qq.com/s?__biz=MzA4MDI2NjMyOA==&mid=212547400&idx=1&sn=d00924fe9a86ca74e8db902e12969aee#rd">
+		<img class="logo" src="/static/logo3.png" style="text-align: center;">
+	  </a>
+	  <a href="http://mp.weixin.qq.com/s?__biz=MzA4MDI2NjMyOA==&mid=212547400&idx=1&sn=d00924fe9a86ca74e8db902e12969aee#rd" style="font-size:16px">点击Ho进入Ho道</a>
     </div>
-
-  {% include 'footer.html' %}
+	
   </body>
 </html>
 
